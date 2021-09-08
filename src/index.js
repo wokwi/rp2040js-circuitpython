@@ -1,6 +1,7 @@
 const { RP2040, ConsoleLogger, LogLevel, USBCDC } = require('rp2040js');
 const { loadUF2 } = require('./load-uf2');
 const { bootromB1 } = require('./bootrom');
+const { GDBTCPServer } = require('rp2040js/gdb-tcp-server');
 
 const mcu = new RP2040();
 mcu.loadBootrom(bootromB1);
@@ -26,6 +27,10 @@ process.stdin.on('data', (chunk) => {
 // The following patch skips the 1 second boot delay, but we always start in safe mode:
 mcu.sramView.setUint32(0x40000, 0xad0005af, true);
 
+// Configure GDB
+const gdbServer = new GDBTCPServer(mcu, process.env.GDB_PORT || 3333);
+
 console.log('Starting CircuitPython simulator. Press Ctrl+X to exit.');
+console.log(`GDB server listening on TCP port ${gdbServer.port}`);
 mcu.PC = 0x10000000;
 mcu.execute();

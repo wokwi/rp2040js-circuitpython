@@ -31,6 +31,16 @@ Press any key to enter the REPL. Use CTRL-D to reload.
 
 Then type any key (e.g. enter) to get into the REPL. Use "Ctrl+X" to exit from the simulator, Ctrl+E to go into paste mode, and Ctrl+D to soft-restart CircuitPython.
 
+## GDB Server
+
+The simulator listens for GDB connections on port 3333. Use the following command to connect the GDB debugger to the simulator:
+
+```
+target remote localhost:3333
+```
+
+You can change the port number by setting the `GDB_PORT` environment variable.
+
 ## License
 
 Copyright (C) 2021 Uri Shaked. Released under the MIT license.
