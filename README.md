@@ -1,6 +1,6 @@
 # CircuitPython Command-line Simulator
 
-A simple CircuitPython on Raspberry Pi Pico simulator, built on top of the [rp2040js](https://github.com/wokwi/ rp2040js) library.
+A simple CircuitPython on Raspberry Pi Pico simulator, built on top of the [rp2040js](https://github.com/wokwi/rp2040js) library.
 
 You can use this simulator to run the release firmware of CircuitPython on your computer, even if you
 don't have access to the physical hardware. You can use it for automated testing (e.g. in a CI environment), as well as for educational purposes.
