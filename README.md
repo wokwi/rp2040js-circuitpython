@@ -5,7 +5,7 @@ A simple CircuitPython on Raspberry Pi Pico simulator, built on top of the [rp20
 You can use this simulator to run the release firmware of CircuitPython on your computer, even if you
 don't have access to the physical hardware. You can use it for automated testing (e.g. in a CI environment), as well as for educational purposes.
 
-If you are looking for a full-blown, user friendly CircuitPython simualtor, please check out [Wokwi](https://wokwi.com): Start a [new CircuitPython project on Wokwi](https://wokwi.com/arduino/new?template=circuitpython-pi-pico).
+If you are looking for a full-blown, user friendly CircuitPython simulator, please check out [Wokwi](https://wokwi.com): Start a [new CircuitPython project on Wokwi](https://wokwi.com/arduino/new?template=circuitpython-pi-pico).
 
 ## Usage
 
